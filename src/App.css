@@ -1,38 +1,348 @@
-.App {
-  text-align: center;
+.content{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin: auto;
+  top: calc(100vh / 2 - 18rem);
+  width: 63rem;
+  max-width: 900px;
+  height: 36rem;
+  background-color: #fff;
+  box-shadow: 0 0 2rem #fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.info {
+  width: 56%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 10px 0 10px #aaa;
+  z-index: 100;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44%;
+  height: 100%;
+  background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.jesus{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.bigger{
+  width: 40%!important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.jesus-text{
+  position: relative;
+  background-color: grey;
+  color: #fff;
+  border-radius: 1rem;
+  padding: 2rem;
+  margin: 3rem;
+  border-right: 5px solid #3d3d3d;
+  border-bottom: 5px solid #3d3d3d;
+}
+
+.jesus-text::after{
+    content: '';
+    position: absolute;
+    background-color: grey;
+    bottom: -12.5px;
+    right: 6rem;
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-right: 5px solid #3d3d3d;
+    transform: rotate(45deg);
+}
+
+.jesus-img{
+  position: relative;
+  margin-left: 2rem;
+  height: 20rem;
+}
+
+.jesus-img-2{
+  position: relative;
+  bottom: 2rem;
+  height: 15rem;
+}
+
+.continue{
+  cursor: pointer;
+  text-decoration: none;
+  background: none;
+  border: none;
+}
+
+.continue > .circle{
+  position: relative;
+  margin: auto;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 4rem;
+  background-color: orangered;
+  transition: .3s;
+}
+
+.continue:hover > .circle{
+  transform: translateY(.6rem);
+  background-color: green!important;
+}
+
+.continue > .circle::after{
+  content: '';
+  position: absolute;
+  display: block;
+  top: 1.2rem;
+  left: .8rem;
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  border-top: 8px solid #fff;
+  border-right: 8px solid #fff;
+}
+
+.continue > p{
+  margin-top: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #3d3d3d;
+}
+
+.form-footer{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 0;
+  right: 1rem;
+}
+
+.form-footer img{
+  margin-right: 1rem;
+  transform: translateY(-1.15rem);
+}
+
+.form-footer p{
+  width: 10rem;
+  line-height: 1rem;
+  font-weight: 400;
+}
+
+.label{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label > input{
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  padding: .3rem;
+  border: none;
+  border-bottom: 2px solid grey;
+
+}
+
+.label > input:focus{
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  border-bottom: 2px solid orangered;
+}
+
+.label > .button{
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  
+}
+
+.label > select{
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  padding: .3rem;
+  padding-right: 2rem;
+  border: none;
+  border-bottom: 2px solid orangered;
+  background-color: transparent;
+  z-index: 300;
+  cursor: pointer;
+
+  appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.label > select:focus{
+  outline:none !important;
+  outline-width: 0 !important;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.label > i{
+  position: relative;
+  right: -7rem;
+  top: -4rem;
+  width: 16px;
+  height: 16px;
+  display: block;
+  border-left:3px solid orangered;
+  border-bottom:3px solid orangered;
+  transform: rotate(-45deg);
+  transition: .3s;
+  z-index: 299;
+}
+
+.label > select:hover ~ i{
+  transform: rotate(-45deg) translateY(2px) translateX(-2px);
+}
+
+.label > .button{
+  border: none;
+  color: #fff;
+  width: 80%;
+  padding: 1rem;
+  border-radius: 4rem;
+  font-size: 1rem;
+  background-color: orangered;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.label > .button:hover{
+  background-color: green !important;
+}
+
+.yes-no{
+  display: flex;
+  flex-direction: row;
+  width: 60%;
+}
+
+.yes-no > button{
+  border: none;
+  color: #fff;
+  width: 40%;
+  margin: 5%;
+  padding: 2rem;
+  border-radius: 4rem;
+  font-size: 1rem;
+  background-color: orangered;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.yes-no > button:hover{
+  background-color: green!important;
+  transform: translateY(.6rem);
+}
+
+.no{
+  background-color:purple!important;
+}
+
+.back-div{
+  position: relative;
+  top: 1rem;
+  right: -1rem;
+  display: flex;
+  cursor: pointer;
+  width: 0;
+  height: 0;
+  z-index: 500;
+}
+
+.back-div:hover > .back{
+  transform: rotate(-45deg) translateX(-5px) translateY(-5px);
+}
+
+.back{
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: transparent;
+  border: none;
+  border-top: 7px solid orangered;
+  border-left: 7px solid orangered;
+  transform: rotate(-45deg);
+  transition: .5s;
+  z-index: 500;
+}
+
+.back ~ p{
+  position: relative;
+  left: 1.3rem;
+  top: -.25rem;
+  font-weight: 600;
+  color: orangered;
+
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+input[type=number] { -moz-appearance:textfield; }
+
+@media (max-width: 920px){
+  .content{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    top: 0;
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .info{
+    width: 100%;
+    height: 60vh;
+  }
+
+  .form{
+    width: 100%;
+    height: 40vh;
+    z-index: 200;
+  }
+
+  .jesus-img{
+    top: -4rem;
+    left: 4rem;
+  }
+
+  .jesus-img-2{
+    height: 10rem;
+    bottom: 0;
+  }
+  .form-footer{
+    right: calc(50% - 7.3rem);
+  }
+}
+
+@media (max-width: 360px){
+  .jesus-text{
+    margin: 1rem;
+  }
+  .jesus-img{
+    margin-top: 2rem;
+  }
+  .jesus-img-2{
+    margin-top: -2rem;
   }
 }

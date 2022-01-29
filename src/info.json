@@ -1,0 +1,17 @@
+[
+    {
+        "message": "¡Hola! ¡Estaba esperando encontrarme con vos! ¿Estás listo para vivir este Retiro de Pascua?"
+    },{
+        "message": "¿Cuál es tu nombre?"
+    },{
+        "message": "¿Participás de algún grupo dentro del Movimiento de la Palabra de Dios?"
+    },{
+        "message": "¿Cuántos años tenés?"
+    },{
+        "message": "¿Tenés correo electrónico? Si la respuesta es no, dejalo vacío"
+    },{
+        "message": "Por último voy a pedirte un número de teléfono para mantenernos en contacto"
+    }
+
+
+]
